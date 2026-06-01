@@ -1,0 +1,59 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+
+    background: #f6f6f6;
+
+    margin: 0;
+}
+
+header {
+    text-align: center;
+
+    background: #ffb6c1;
+
+    color: white;
+
+    padding: 30px;
+}
+
+.search-box {
+    text-align: center;
+
+    margin: 20px;
+}
+
+input {
+    width: 300px;
+
+    padding: 10px;
+
+    font-size: 16px;
+}
+
+.book-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(300px,1fr));
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.book-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.15);
+}
+
+.book-card h2 {
+    color: hotpink;
+}
