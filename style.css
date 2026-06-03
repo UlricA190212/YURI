@@ -1,16 +1,16 @@
 /* 整體 */
 
 body {
-
     font-family: "Microsoft JhengHei", sans-serif;
 
-    background: #f5f5f5;
+    background-image: url("https://ulrica190212.github.io/YURI/photo/%E5%8B%9D%E8%80%85%E7%9A%84%E6%97%A9%E9%A4%90.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 
     margin: 0;
-
     padding: 0;
 }
-
 /* 標題 */
 
 header {
