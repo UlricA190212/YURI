@@ -24,30 +24,29 @@ function searchBooks() {
     }
 }
 
-function openBook(title, author, genre, rating, collection, review) {
+function openBook(id) {
+    const book = books[id];
+    if (!book) return;
 
-    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalTitle").textContent = book.title;
+    document.getElementById("modalAuthor").innerHTML = "作者：" + book.author;
+    document.getElementById("modalGenre").innerHTML = "類型：" + book.genre;
+    document.getElementById("modalRating").innerHTML = "推薦：" + book.rating;
+    document.getElementById("modalCollection").innerHTML = "藏書：" + book.collection;
+    document.getElementById("modalReview").innerHTML = book.review;
 
-    document.getElementById("modalAuthor").innerHTML =
-        "<strong>作者：</strong>" + author;
-
-    document.getElementById("modalGenre").innerHTML =
-        "<strong>類型：</strong>" + genre;
-
-    document.getElementById("modalRating").innerHTML =
-        "<strong>推薦：</strong>" + rating;
-
-    document.getElementById("modalCollection").innerHTML =
-        "<strong>藏書：</strong>" + collection;
-
-    document.getElementById("modalReview").innerHTML =
-        "<strong>心得：</strong><br>" + review;
+    // ⭐ 重點：背景圖
+    const modal = document.getElementById("modalContent");
+    modal.style.backgroundImage = `url('${book.cover}')`;
+    modal.style.backgroundSize = "cover";
+    modal.style.backgroundPosition = "center";
 
     document.getElementById("bookModal").style.display = "block";
 }
 
 function closeBook() {
     document.getElementById("bookModal").style.display = "none";
+  
 }
 
 window.addEventListener("click", function(event) {
@@ -75,10 +74,10 @@ const books = {
   wataren: {
     title: "我們不可能成為戀人！絕對不行。（※似乎可行？）",
     author: "みかみてれん",
-    genre: "後宮、校園、修羅場、三角戀",
+    genre: "校園、後宮、三角戀、修羅場",
     rating: "★★★★★",
-    collection: "1~8小說、第7集漫畫(2本)、短篇集小說、SS集小說",
-    review: "一群有趣的女孩子們。百合後宮番，屑粉毛被美少女們玩弄的故事。"
+    collection: "1~8小說、第7集漫畫(2本)、SS集小說、短集篇小說",
+    review: "一群有趣的女孩子們。百合後宮番，屑粉毛被美少女們玩弄的故事",
   },
 
   shinokoi: {
@@ -278,7 +277,7 @@ const books = {
     collection: "1漫畫",
     review: "青澀校園戀愛番，兩個人都可可愛愛的。原作出到第二集就完結了，總之看得姨母笑不停"
   },
-    只想在床上沉淪: {
+  只想在床上沉淪: {
     title: "只想在床上沉淪，凝望天使的睡顏",
     author: "上栖綴人",
     genre: "校園、日常、R-18、同居",
@@ -286,6 +285,7 @@ const books = {
     collection: "小說",
     review: " 千種老師的封面與插圖超香，劇情超乎想像的展開；不負R-18的名號:)"
   },
+  
   };
 
 function openBook(id) {
