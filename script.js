@@ -301,14 +301,6 @@ const books = {
     collection: "漫畫",
     review: "獸耳真香，主僕:)畫風精細，多對CP，大家都很可愛"
   },
-    脫離日常後: {
-    title: "脫離日常後想做的事",
-    author: "雪子",
-    genre: "短篇、多種設定",
-    rating: "★★★★★",
-    collection: "漫畫",
-    review: "輕鬆小品、睡覺前看完心情好"
-  },
   
   };
 
