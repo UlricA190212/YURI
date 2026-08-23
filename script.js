@@ -278,6 +278,14 @@ const books = {
     collection: "1漫畫",
     review: "青澀校園戀愛番，兩個人都可可愛愛的。原作出到第二集就完結了，總之看得姨母笑不停"
   },
+    只想在床上沉淪: {
+    title: "只想在床上沉淪，凝望天使的睡顏",
+    author: "上栖綴人",
+    genre: "校園、日常、R-18、同居",
+    rating: "★★★★★",
+    collection: "小說",
+    review: " 千種老師的封面與插圖超香，劇情超乎想像的展開；不負R-18的名號:)"
+  },
   };
 
 function openBook(id) {
